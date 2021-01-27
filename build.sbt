@@ -1,5 +1,4 @@
 name := "spark-structured-streaming-custom-sink"
-//name := sys.env.get("APP_NAME").getOrElse("c8y-data-streaming")
 
 scalaVersion := "2.11.12"
 
@@ -28,11 +27,6 @@ assemblyShadeRules in assembly := Seq(
   ShadeRule.rename("com.typesafe.config.**" -> "my_conf.@1")
     .inLibrary("com.typesafe" % "config" % "1.3.3")
     .inProject
-)
-
-
-resolvers ++= Seq(
-  "Confluent" at "http://packages.confluent.io/maven/"
 )
 
 lazy val dependencies = new {
