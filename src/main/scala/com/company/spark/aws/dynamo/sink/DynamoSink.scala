@@ -3,6 +3,7 @@ package com.company.spark.aws.dynamo.sink
 import com.amazonaws.services.dynamodbv2.model.AttributeValue
 import org.apache.spark.sql.{ForeachWriter, Row}
 import org.slf4j.LoggerFactory
+import scala.collection.JavaConverters._
 
 /**
  * Dynamodb Sink using  [[ ForeachWriter]]
